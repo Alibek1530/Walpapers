@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="uz.ali.imagefon.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_popular"
+        android:name="uz.ali.imagefon.ui.popular.PopularFragment"
+        android:label="@string/menu_popular"
+        tools:layout="@layout/fragment_popular" />
+
+    <fragment
+        android:id="@+id/nav_random"
+        android:name="uz.ali.imagefon.ui.random.RandomFragment"
+        android:label="@string/menu_random"
+        tools:layout="@layout/fragment_random" />
+    <fragment
+        android:id="@+id/nav_liked"
+        android:name="uz.ali.imagefon.ui.liked.LikedFragment"
+        android:label="@string/menu_liked"
+        tools:layout="@layout/fragment_liked" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="uz.ali.imagefon.ui.about.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="uz.ali.imagefon.ui.image.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" />
+</navigation>

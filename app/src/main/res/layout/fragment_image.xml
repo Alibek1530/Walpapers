@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.image.ImageFragment">
+
+
+
+    <ImageView
+        android:id="@+id/images"
+        android:scaleType="centerInside"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="2dp"
+        android:indeterminate="true" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/zagruzka"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/mobile"
+            android:background="@drawable/ic_download"/>
+        <ImageView
+            android:id="@+id/mobile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintLeft_toRightOf="@id/zagruzka"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/like"
+            android:background="@drawable/ic_mobile"/>
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="48dp"
+            app:layout_constraintLeft_toRightOf="@id/mobile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/ic_favorite_border"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_joylsh"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/blok"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/home"
+            android:background="@drawable/ic_lock"/>
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintLeft_toRightOf="@id/blok"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/all"
+            android:background="@drawable/ic_houses"/>
+        <ImageView
+            android:id="@+id/all"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="48dp"
+            app:layout_constraintLeft_toRightOf="@id/home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/home_lock"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include layout="@layout/layout_persistent_bottom_sheet" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
